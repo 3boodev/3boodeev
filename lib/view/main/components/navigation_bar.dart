@@ -15,7 +15,7 @@ class TopNavigationBar extends StatelessWidget {
           const Spacer(),
           Padding(
             padding: const EdgeInsets.all(defaultPadding),
-            child:!Responsive.isLargeMobile(context)? Image.asset('assets/images/triange_icon.png') : MenuButton(onTap: () => Scaffold.of(context).openDrawer(),),
+            child:!Responsive.isLargeMobile(context)? Image.asset('assets/images/menu_icon.png') : MenuButton(onTap: () => Scaffold.of(context).openDrawer(),),
           ),
           // if(Responsive.isLargeMobile(context)) MenuButton(),
           const Spacer(flex: 2,),
