@@ -59,36 +59,38 @@ class CertificateStack extends StatelessWidget {
                           text: certificateList[index].skills,style: const TextStyle(color: Colors.grey,overflow: TextOverflow.ellipsis),)
                       ]
                   ),),
-                const SizedBox(height: defaultPadding,),
-                InkWell(
-                  onTap: () {
-                    launchUrl(Uri.parse(certificateList[index].credential));
-                  },
-                  child: Container(
-                    height: 40,
-                    width: 150,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        gradient: LinearGradient(
-                            colors: [
-                              Colors.pink,
-                              Colors.blue.shade900,
-                            ]
-                        ),
-                        boxShadow:const [
-                          BoxShadow(color: Colors.blue,offset: Offset(0, -1),blurRadius: 5),
-                          BoxShadow(color: Colors.red,offset: Offset(0, 1),blurRadius: 5),
-                        ]
-                    ),
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('Credentials',style: TextStyle(color: Colors.white,fontSize: 10),),
-                        SizedBox(width: 5,),
-                        Icon(
-                          CupertinoIcons.arrow_turn_up_right,color: Colors.white,size: 10,
-                        )
-                      ],
+                const SizedBox(height: defaultPadding-5,),
+                Center(
+                  child: InkWell(
+                    onTap: () {
+                      launchUrl(Uri.parse(certificateList[index].credential));
+                    },
+                    child: Container(
+                      height: 40,
+                      width: 150,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          gradient: LinearGradient(
+                              colors: [
+                                Colors.pink,
+                                Colors.blue.shade900,
+                              ]
+                          ),
+                          boxShadow:const [
+                            BoxShadow(color: Colors.blue,offset: Offset(0, -1),blurRadius: 5),
+                            BoxShadow(color: Colors.red,offset: Offset(0, 1),blurRadius: 5),
+                          ]
+                      ),
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('Reference',style: TextStyle(color: Colors.white,fontSize: 10),),
+                          SizedBox(width: 5,),
+                          Icon(
+                            CupertinoIcons.arrow_turn_up_right,color: Colors.white,size: 10,
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),

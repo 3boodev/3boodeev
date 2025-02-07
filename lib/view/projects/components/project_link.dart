@@ -6,22 +6,26 @@ import '../../../model/project_model.dart';
 
 class ProjectLinks extends StatelessWidget {
   final int index;
+
   const ProjectLinks({super.key, required this.index});
+
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Row(
-          children: [
-            const Text('Show App',style: TextStyle(color: Colors.white),overflow: TextOverflow.ellipsis),
-            IconButton(onPressed: () {launchUrl(Uri.parse(projectList[index].link));}, icon: SvgPicture.asset('assets/icons/check.svg')),
-          ],
-        ),
-        const Spacer(),
-        TextButton(
-            onPressed: () {
-              launchUrl(Uri.parse(projectList[index].link));
-            }, child: const Text('View',overflow: TextOverflow.ellipsis,style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold,fontSize: 10),))
+        if(projectList[index].playLink!='')
+        GestureDetector(
+            onTap: () {
+              launchUrl(Uri.parse(projectList[index].playLink));
+            },
+            child: SvgPicture.asset('assets/icons/playstore.svg',width: 40,height: 40,)),
+        if(projectList[index].appStoreLink!='')
+          GestureDetector(
+            onTap: () {
+              launchUrl(Uri.parse(projectList[index].appStoreLink));
+            },
+            child: SvgPicture.asset('assets/icons/appstore.svg',width: 40,height: 40,)),
       ],
     );
   }

@@ -46,9 +46,11 @@ class MySKills extends StatelessWidget {
       children: [
         AnimatedLinearProgressIndicator(percentage: 0.95, title: 'Flutter',image: 'assets/icons/flutter.png',),
         AnimatedLinearProgressIndicator(percentage: 0.9, title: 'Dart',image: 'assets/icons/dart.png'),
-        AnimatedLinearProgressIndicator(percentage: 0.8, title: 'Firebase',image: 'assets/icons/firebase.png'),
-        AnimatedLinearProgressIndicator(percentage: 0.8, title: 'Responsive Design',image: 'assets/icons/flutter.png'),
+        AnimatedLinearProgressIndicator(percentage: 0.9, title: 'Firebase',image: 'assets/icons/firebase.png'),
+        AnimatedLinearProgressIndicator(percentage: 0.9, title: 'Responsive Design',image: 'assets/icons/flutter.png'),
         AnimatedLinearProgressIndicator(percentage: 0.9, title: 'Clean Architecture',image: 'assets/icons/flutter.png'),
+        AnimatedLinearProgressIndicator(percentage: 0.7, title: 'CI/CD',image: 'assets/icons/flutter.png'),
+        AnimatedLinearProgressIndicator(percentage: 0.8, title: 'Payment Integration',image: 'assets/icons/flutter.png'),
       ],);
   }
 }
