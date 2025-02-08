@@ -12,7 +12,7 @@ class PersonalInfo extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(height: defaultPadding/2,),
-        AreaInfoText(title: 'Contact', text: '0502947738'),
+        AreaInfoText(title: 'Contact', text: '+966502947738'),
         AreaInfoText(title: 'Email', text: 'a.abdelsamad.al@gmail.com'),
         AreaInfoText(title: 'LinkedIn', text: '@abdullah-abdelsamad'),
         AreaInfoText(title: 'Github', text: '@3boodev'),
