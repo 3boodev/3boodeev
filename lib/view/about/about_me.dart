@@ -11,13 +11,13 @@ class AboutMeScreen extends StatelessWidget {
       aspectRatio: 1.23,
       child: Container(
         color:  bgColor,
-        padding: EdgeInsets.all(defaultPadding),
+        padding: const EdgeInsets.all(defaultPadding),
         child: Column(
           children: [
             const TitleText(prefix: 'About', title: 'Me'),
             const SizedBox(height: defaultPadding*2,),
             const DrawerImage(),
-            const SizedBox(height: defaultPadding/4,),
+            const SizedBox(height: defaultPadding/3,),
             Text('Abdullah Alamary',style: Theme.of(context).textTheme.titleSmall,),
             const SizedBox(height: defaultPadding/4,),
             const Text('Senior Flutter Developer',
@@ -26,12 +26,12 @@ class AboutMeScreen extends StatelessWidget {
                   fontWeight: FontWeight.w200,
                   height: 1.5
               ),),
-            SizedBox(height: defaultPadding*2,),
-            AreaInfoText(title: 'Contact', text: '0502947738'),
-            AreaInfoText(title: 'Email', text: 'a.abdelsamad.al@gmail.com'),
-            AreaInfoText(title: 'LinkedIn', text: '@3boodev'),
-            AreaInfoText(title: 'Github', text: '@3boodev'),
-            SizedBox(
+            const SizedBox(height: defaultPadding*2,),
+            const AreaInfoText(title: 'Contact', text: '0502947738'),
+            const AreaInfoText(title: 'Email', text: 'a.abdelsamad.al@gmail.com'),
+            const AreaInfoText(title: 'LinkedIn', text: '@abdullah-abdelsamad'),
+            const AreaInfoText(title: 'Github', text: '@3boodev'),
+            const SizedBox(
               height: defaultPadding,
             ),
           ],

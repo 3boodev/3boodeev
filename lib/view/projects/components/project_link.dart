@@ -12,20 +12,20 @@ class ProjectLinks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         if(projectList[index].playLink!='')
         GestureDetector(
             onTap: () {
               launchUrl(Uri.parse(projectList[index].playLink));
             },
-            child: SvgPicture.asset('assets/icons/playstore.svg',width: 40,height: 40,)),
+            child: SvgPicture.asset('assets/icons/playstore.svg',width: 30,height: 30,)),
         if(projectList[index].appStoreLink!='')
           GestureDetector(
             onTap: () {
               launchUrl(Uri.parse(projectList[index].appStoreLink));
             },
-            child: SvgPicture.asset('assets/icons/appstore.svg',width: 40,height: 40,)),
+            child: SvgPicture.asset('assets/icons/appstore.svg',width: 30,height: 30,)),
       ],
     );
   }

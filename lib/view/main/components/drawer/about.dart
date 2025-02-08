@@ -13,6 +13,9 @@ class About extends StatelessWidget {
           children: [
             const Spacer(flex: 2,),
             const DrawerImage(),
+            const SizedBox(
+              height: 15,
+            ),
             Text('Abdullah Alamary',style: Theme.of(context).textTheme.titleSmall,),
             const SizedBox(height: defaultPadding/4,),
             const Text('Senior Flutter Developer',    textAlign: TextAlign.center,

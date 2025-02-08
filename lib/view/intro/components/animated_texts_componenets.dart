@@ -30,59 +30,73 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
   }
   @override
   Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _controller,
-      builder: (context, child) {
-        final value = _controller.value;
-        return Transform.translate(
-          offset: Offset(0, 2 * value), // Move the container up and down
-          child: Container(
-            height: widget.height!,
-            width: widget.width!,
-            padding: const EdgeInsets.all(defaultPadding / 4),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
-              gradient: const LinearGradient(colors: [
-                Colors.pinkAccent,
-                Colors.blue,
-              ]),
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.pink,
-                  offset: Offset(-2, 0),
-                  blurRadius: 20,
+    return Column(
+      children: [
+        AnimatedBuilder(
+          animation: _controller,
+          builder: (context, child) {
+            final value = _controller.value;
+            return Transform.translate(
+              offset: Offset(0, 2 * value), // Move the container up and down
+              child: Container(
+                height: widget.height!,
+                width: widget.width!,
+                padding: const EdgeInsets.all(defaultPadding / 4),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  gradient: const LinearGradient(colors: [
+                    Colors.pinkAccent,
+                    Colors.blue,
+                  ]),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.pink,
+                      offset: Offset(-2, 0),
+                      blurRadius: 20,
+                    ),
+                    BoxShadow(
+                      color: Colors.blue,
+                      offset: Offset(2, 0),
+                      blurRadius: 20,
+                    ),
+                  ],
                 ),
-                BoxShadow(
-                  color: Colors.blue,
-                  offset: Offset(2, 0),
-                  blurRadius: 20,
+                child: Container(
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: Colors.black.withOpacity(0.4),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: Image.asset(
+                    widget.image??'assets/images/profile.png',
+                    height: Responsive.isLargeMobile(context)
+                        ? MediaQuery.sizeOf(context).width * 0.3
+                        : Responsive.isTablet(context)
+                            ? MediaQuery.sizeOf(context).width * 0.2
+                            : 200,
+                    width: Responsive.isLargeMobile(context)
+                        ? MediaQuery.sizeOf(context).width * 0.3
+                        : Responsive.isTablet(context)
+                            ? MediaQuery.sizeOf(context).width * 0.2
+                            : 200,
+                    fit: BoxFit.cover,
+                  ),
                 ),
-              ],
-            ),
-            child: Container(
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: Colors.black.withOpacity(0.4),
-                borderRadius: BorderRadius.circular(30),
               ),
-              child: Image.asset(
-                widget.image??'assets/images/profile.png',
-                height: Responsive.isLargeMobile(context)
-                    ? MediaQuery.sizeOf(context).width * 0.3
-                    : Responsive.isTablet(context)
-                        ? MediaQuery.sizeOf(context).width * 0.2
-                        : 200,
-                width: Responsive.isLargeMobile(context)
-                    ? MediaQuery.sizeOf(context).width * 0.3
-                    : Responsive.isTablet(context)
-                        ? MediaQuery.sizeOf(context).width * 0.2
-                        : 200,
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
-        );
-      },
+            );
+          },
+        ),
+        const SizedBox(
+          height: 15,
+        ),
+        Text('Abdullah Alamary',style: Theme.of(context).textTheme.titleSmall,),
+        const SizedBox(height: defaultPadding/4,),
+        const Text('Senior Flutter Developer',    textAlign: TextAlign.center,
+          style: TextStyle(
+              fontWeight: FontWeight.w200,
+              height: 1.5
+          ),),
+      ],
     );
   }
 }

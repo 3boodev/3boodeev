@@ -20,7 +20,7 @@ class CertificateStack extends StatelessWidget {
       },
       borderRadius: BorderRadius.circular(30),
       child: AnimatedContainer(
-          padding: const EdgeInsets.all(defaultPadding),
+          padding: const EdgeInsets.all(defaultPadding-5),
           height: double.infinity,
           width: double.infinity,
           decoration: BoxDecoration(
