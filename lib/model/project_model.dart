@@ -57,6 +57,15 @@ List<Project> projectList = [
       appStoreLink:
           'https://apps.apple.com/eg/app/aloo-mashawair-captain/id6720759857'),
   Project(
+      name: 'ADC',
+      description:
+      'Aloo Dot Com [ADC]: Discover the latest fashion trends for men, women, and kids at competitive prices. Enjoy easy shopping, exclusive deals, and fast worldwide shipping.Aloodot.com (ADC ) is a global Saudi e-commerce platform revolutionizing fast fashion .',
+      image: 'assets/images/adc.png',
+      playLink:
+      'https://apps.apple.com/eg/app/adc/id6742337276',
+      appStoreLink:
+      'https://apps.apple.com/eg/app/adc/id6742337276'),
+  Project(
       name: 'Waffer',
       description:
           'Wafar is your ultimate platform for wholesale and retail shopping at competitive prices with high-quality products. Whether you own a store, a restaurant, or are simply a consumer looking for the best deals, the app provides a seamless and secure shopping experience with a wide range of products from trusted suppliers.',
