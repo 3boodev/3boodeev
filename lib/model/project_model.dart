@@ -62,7 +62,7 @@ List<Project> projectList = [
       'Aloo Dot Com [ADC]: Discover the latest fashion trends for men, women, and kids at competitive prices. Enjoy easy shopping, exclusive deals, and fast worldwide shipping.Aloodot.com (ADC ) is a global Saudi e-commerce platform revolutionizing fast fashion .',
       image: 'assets/images/adc.png',
       playLink:
-      'https://apps.apple.com/eg/app/adc/id6742337276',
+      'https://play.google.com/store/apps/details?id=com.aloo.dot.com.aloo_dot_com&hl=en',
       appStoreLink:
       'https://apps.apple.com/eg/app/adc/id6742337276'),
   Project(
