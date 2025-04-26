@@ -8,7 +8,7 @@ class AreaInfoText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  const EdgeInsets.only(bottom: defaultPadding/2),
+      padding:  const EdgeInsetsDirectional.symmetric(horizontal: defaultPadding),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

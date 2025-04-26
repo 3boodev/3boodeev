@@ -29,7 +29,7 @@ class AboutMeScreen extends StatelessWidget {
                   height: 1.5
               ),),
             const SizedBox(height: defaultPadding*2,),
-            const AreaInfoText(title: 'Contact', text: '+966502947738'),
+            const AreaInfoText(title: 'Contact', text: '+966502947738 OR +201552252349'),
             const AreaInfoText(title: 'Email', text: 'a.abdelsamad.al@gmail.com'),
             const AreaInfoText(title: 'LinkedIn', text: '@abdullah-abdelsamad'),
             const AreaInfoText(title: 'Github', text: '@3boodev'),
