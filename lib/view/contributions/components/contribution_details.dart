@@ -37,7 +37,7 @@ class ContributionDetails extends StatelessWidget {
                   style: Theme.of(context).textTheme.bodySmall!.copyWith(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontSize: 22),
+                      fontSize: 20),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -46,14 +46,10 @@ class ContributionDetails extends StatelessWidget {
                 ),
                 Text(
                   contributionList[index].description,
-                  maxLines: 3,
-                  style: const TextStyle(color: Colors.amber,fontSize: 14),
+                  style: const TextStyle(color: Colors.amber,fontSize: 12),
                 ),
                 const SizedBox(
                   height: defaultPadding * 2,
-                ),
-                const SizedBox(
-                  height: defaultPadding - 5,
                 ),
                 Center(
                   child: InkWell(
