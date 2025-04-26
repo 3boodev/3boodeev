@@ -20,7 +20,7 @@ class CertificationGrid extends StatelessWidget {
         return Obx(() => AnimatedContainer(
             duration: const Duration(milliseconds: 200),
             margin: const EdgeInsets.symmetric(
-                vertical: defaultPadding, horizontal: defaultPadding),
+                vertical: defaultPadding-10, horizontal: defaultPadding),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 gradient: const LinearGradient(colors: [
