@@ -42,14 +42,14 @@ class ContributionDetails extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                 ),
                 const SizedBox(
-                  height: defaultPadding,
+                  height: defaultPadding-20,
                 ),
                 Text(
                   contributionList[index].description,
                   style: const TextStyle(color: Colors.amber,fontSize: 12),
                 ),
                 const SizedBox(
-                  height: defaultPadding * 2,
+                  height: defaultPadding * 1.2,
                 ),
                 Center(
                   child: InkWell(
