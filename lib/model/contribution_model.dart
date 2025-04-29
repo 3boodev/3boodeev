@@ -29,4 +29,9 @@ List<ContributionModel> contributionList = [
         'A CLI tool to scan and delete unused asset files in your Flutter project. Optimize your app size and keep your project clean!',
     credential: 'https://pub.dev/packages/unused_assets_removal',
   ),
+  ContributionModel(
+    name: 'smart_dropdown_plus',
+    description: 'A simple yet flexible dropdown widget for Flutter',
+    credential: 'https://pub.dev/packages/smart_dropdown_plus',
+  ),
 ];
