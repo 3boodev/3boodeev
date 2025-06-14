@@ -34,4 +34,9 @@ List<ContributionModel> contributionList = [
     description: 'A simple yet flexible dropdown widget for Flutter',
     credential: 'https://pub.dev/packages/smart_dropdown_plus',
   ),
+  ContributionModel(
+    name: 'border_beam',
+    description: 'A lightweight and customizable Flutter widget that adds a glowing, animated border beam around any widget',
+    credential: 'https://pub.dev/packages/border_beam',
+  ),
 ];
