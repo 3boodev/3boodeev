@@ -18,7 +18,7 @@ class About extends StatelessWidget {
             ),
             Text('Abdullah Alamary',style: Theme.of(context).textTheme.titleSmall,),
             const SizedBox(height: defaultPadding/4,),
-            const Text('Senior Flutter Developer',    textAlign: TextAlign.center,
+            const Text('Senior Mobile Engineer',    textAlign: TextAlign.center,
               style: TextStyle(
                   fontWeight: FontWeight.w200,
                   height: 1.5
