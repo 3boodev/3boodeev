@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/res/constants.dart';
+import 'package:flutter_portfolio/res/theme.dart';
 import 'package:flutter_portfolio/view/splash/splash_view.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,17 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        scaffoldBackgroundColor: bgColor,
-        useMaterial3: true,
-        textTheme: GoogleFonts.openSansTextTheme(Theme.of(context).textTheme)
-            .apply(bodyColor: Colors.white,)
-            .copyWith(
-          bodySmall: const TextStyle(color: bodyTextColor),
-          bodyMedium: const TextStyle(color: bodyTextColor),
-        ),
-      ),
+      theme: AppTheme.darkTheme,
 
       home: SplashView()
     );

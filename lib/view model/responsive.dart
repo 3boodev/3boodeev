@@ -1,51 +1,59 @@
 import 'package:flutter/material.dart';
 
 class Responsive extends StatelessWidget {
-  const Responsive({super.key, required this.desktop, required this.largeMobile,required this.mobile,required this.tablet, this.extraLargeScreen});
+  const Responsive({
+    super.key,
+    required this.desktop,
+    this.largeMobile,
+    required this.mobile,
+    this.tablet,
+    this.extraLargeScreen,
+  });
+
   final Widget desktop;
   final Widget? largeMobile;
-  final Widget  mobile;
+  final Widget mobile;
   final Widget? tablet;
   final Widget? extraLargeScreen;
 
-  static bool isMobile(BuildContext context){
-    return MediaQuery.sizeOf(context).width <= 500;
-  }
+  // Breakpoints
+  static const double mobileWidth = 600;
+  static const double tabletWidth = 1024;
+  static const double extraLargeWidth = 1400;
 
-  static bool isLargeMobile(BuildContext context){
-    return MediaQuery.sizeOf(context).width <=700;
-  }
+  static bool isMobile(BuildContext context) =>
+      MediaQuery.sizeOf(context).width < mobileWidth;
 
+  static bool isTablet(BuildContext context) =>
+      MediaQuery.sizeOf(context).width >= mobileWidth &&
+      MediaQuery.sizeOf(context).width < tabletWidth;
 
-  static bool isTablet(BuildContext context){
-    return MediaQuery.sizeOf(context).width < 1080;
-  }
+  static bool isDesktop(BuildContext context) =>
+      MediaQuery.sizeOf(context).width >= tabletWidth;
 
+  static bool isSmallMobile(BuildContext context) =>
+      MediaQuery.sizeOf(context).width < 380;
 
-  static bool isDesktop(BuildContext context){
-    return MediaQuery.sizeOf(context).width > 1024;
-  }
-
-  static bool isExtraLargeScreen(BuildContext context){
-    return MediaQuery.sizeOf(context).width > 1400;
-  }
-
-
+  // Backward compatibility methods if needed, but prefer the standard ones above.
+  static bool isLargeMobile(BuildContext context) =>
+      MediaQuery.sizeOf(context).width <= 700; // Kept for legacy support
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
-    if (size.width > 1400 && extraLargeScreen!=null) {
-      return extraLargeScreen!;
-    }
-    else if (size.width >= 1080) {
-      return desktop;
-    } else if (size.width >= 700 && tablet != null) {
-      return tablet!;
-    } else if (size.width >= 500 && largeMobile != null) {
-      return largeMobile!;
-    } else {
-      return mobile;
-    }
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        if (constraints.maxWidth >= extraLargeWidth && extraLargeScreen != null) {
+          return extraLargeScreen!;
+        } else if (constraints.maxWidth >= tabletWidth) {
+          return desktop;
+        } else if (constraints.maxWidth >= 700 && tablet != null) {
+          return tablet!;
+        } else if (constraints.maxWidth >= 500 && largeMobile != null) {
+          return largeMobile!;
+        } else {
+          return mobile;
+        }
+      },
+    );
   }
 }

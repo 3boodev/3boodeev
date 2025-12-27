@@ -24,11 +24,11 @@ class Contributions extends StatelessWidget {
           ),
           Expanded(
               child: Responsive(
-                  desktop: CertificationGrid(crossAxisCount: 3,ratio: 1.5,),
-                  extraLargeScreen: CertificationGrid(crossAxisCount: 4,ratio: 1.6),
-                  largeMobile: CertificationGrid(crossAxisCount: 1,ratio: 1.8),
-                  mobile: CertificationGrid(crossAxisCount: 1,ratio: 1.4),
-                  tablet: CertificationGrid(ratio: 1.7,crossAxisCount: 2,)))
+                  desktop: ContributionGrid(crossAxisCount: 3,ratio: 1.5,),
+                  extraLargeScreen: ContributionGrid(crossAxisCount: 4,ratio: 1.6),
+                  largeMobile: ContributionGrid(crossAxisCount: 1,ratio: 1.8),
+                  mobile: ContributionGrid(crossAxisCount: 1,ratio: 1.4),
+                  tablet: ContributionGrid(ratio: 1.7,crossAxisCount: 2,)))
         ],
       ),
     );

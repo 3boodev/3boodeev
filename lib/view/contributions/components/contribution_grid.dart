@@ -4,10 +4,10 @@ import 'package:get/get.dart';
 import '../../../res/constants.dart';
 import '../../../view model/getx_controllers/certification_controller.dart';
 import 'contribution_details.dart';
-class CertificationGrid extends StatelessWidget {
-  final int crossAxisCount;
-  final double ratio;
-  CertificationGrid({super.key, this.crossAxisCount = 3,  this.ratio=1.3});
+class ContributionGrid extends StatelessWidget {
+   final int? crossAxisCount;
+   final double? ratio;
+   ContributionGrid({super.key, this.crossAxisCount=3 ,  this.ratio=1.3});
   final controller = Get.put(CertificationController());
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class CertificationGrid extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 30),
       itemCount: contributionList.length,
       gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: crossAxisCount, childAspectRatio: ratio),
+          crossAxisCount: crossAxisCount??0, childAspectRatio: ratio??0),
       itemBuilder: (context, index) {
         return Obx(() => AnimatedContainer(
             duration: const Duration(milliseconds: 200),
