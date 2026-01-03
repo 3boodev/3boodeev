@@ -9,14 +9,14 @@ class ConnectButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  const EdgeInsets.symmetric(vertical: defaultPadding),
+      padding:  const EdgeInsets.symmetric(vertical: defaultPadding*0.7),
       child: InkWell(
         onTap: () {
           launchUrl(Uri.parse('https://wa.me/966502947738'));
         },
         borderRadius: BorderRadius.circular(defaultPadding +10),
         child: Container(
-          height: 60,
+          height: 40,
           width: 150,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(defaultPadding),

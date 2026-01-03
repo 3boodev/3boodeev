@@ -4,17 +4,26 @@ import '../../../res/constants.dart';
 import '../../../view model/responsive.dart';
 
 class AnimatedImageContainer extends StatefulWidget {
-  const AnimatedImageContainer({Key? key, this.height = 300, this.width = 250,required this.image})
+  const AnimatedImageContainer(
+      {Key? key,
+      this.height = 300,
+      this.width = 250,
+      required this.image,
+      this.withoutTitle=true})
       : super(key: key);
   final double? width;
   final double? height;
   final String? image;
+  final bool? withoutTitle;
+
   @override
   AnimatedImageContainerState createState() => AnimatedImageContainerState();
 }
+
 class AnimatedImageContainerState extends State<AnimatedImageContainer>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
+
   @override
   void initState() {
     super.initState();
@@ -23,11 +32,13 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
       duration: const Duration(milliseconds: 1000),
     )..repeat(reverse: true); // Repeat the animation loop
   }
+
   @override
   void dispose() {
     _controller.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -68,7 +79,7 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: Image.asset(
-                    widget.image??'assets/images/profile.png',
+                    widget.image ?? 'assets/images/profile.png',
                     height: Responsive.isLargeMobile(context)
                         ? MediaQuery.sizeOf(context).width * 0.3
                         : Responsive.isTablet(context)
@@ -89,13 +100,20 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
         const SizedBox(
           height: 15,
         ),
-        Text('Abdullah Alamary',style: Theme.of(context).textTheme.titleSmall,),
-        const SizedBox(height: defaultPadding/4,),
-        const Text('Senior Mobile Engineer',    textAlign: TextAlign.center,
-          style: TextStyle(
-              fontWeight: FontWeight.w200,
-              height: 1.5
-          ),),
+        if (widget.withoutTitle == true)
+          Text(
+            'Abdullah Alamary',
+            style: Theme.of(context).textTheme.titleMedium,
+          ),
+        const SizedBox(
+          height: defaultPadding / 4,
+        ),
+        if (widget.withoutTitle == true)
+          const Text(
+          'Senior Mobile Engineer',
+          textAlign: TextAlign.center,
+          style: TextStyle(fontWeight: FontWeight.w200, height: 1.5),
+        ),
       ],
     );
   }

@@ -41,7 +41,7 @@ List<Project> projectList = [
   Project(
       name: 'Aloo Mashawair',
       description:
-          '"Aloo Mashawair: Fast, Reliable Ride-Hailing at Your Finger tips Aloo Mashawair is your go-to app for convenient and dependable ride-hailing services. Whether you need a ride across town, a quick pickup, or a drop-off at your destination, Aloo Mashawair makes it easy to get where you need to go. With a few taps, you can book a ride, track your driver\'s location in real-time, and enjoy a smooth, hassle-free journey.',
+          '"Aloo Mashawair: Fast, Reliable Ride-Hailing at Your Finger tips Aloo Mashawair is your go-to app for convenient and dependable ride-hailing certifications. Whether you need a ride across town, a quick pickup, or a drop-off at your destination, Aloo Mashawair makes it easy to get where you need to go. With a few taps, you can book a ride, track your driver\'s location in real-time, and enjoy a smooth, hassle-free journey.',
       image: 'assets/images/mashawair.png',
       playLink:
           'https://play.google.com/store/apps/details?id=com.aloo.mashaweer',
@@ -50,7 +50,7 @@ List<Project> projectList = [
   Project(
       name: 'Aloo Mashawair Captain',
       description:
-          'Aloo Mashaweer Captain: Drive, Earn, and Thrive Join the Aloo Mashaweer Captain community and turn your driving skills into earnings. Aloo Mashaweer Captain is the dedicated app for drivers looking to partner with Aloo Mashaweer, providing reliable ride-hailing services similar to Uber. Get the flexibility to choose your own working hours, accept ride requests, and earn on your own terms',
+          'Aloo Mashaweer Captain: Drive, Earn, and Thrive Join the Aloo Mashaweer Captain community and turn your driving skills into earnings. Aloo Mashaweer Captain is the dedicated app for drivers looking to partner with Aloo Mashaweer, providing reliable ride-hailing certifications similar to Uber. Get the flexibility to choose your own working hours, accept ride requests, and earn on your own terms',
       image: 'assets/images/captain.png',
       playLink:
           'https://play.google.com/store/apps/details?id=com.aloo.aloo_mashaweer_driver',
@@ -92,7 +92,7 @@ List<Project> projectList = [
   Project(
       name: 'Ghaseel',
       description:
-          'Get your car washed anytime and anywhere with Ghaseel. We are the first app for car wash services in Kuwait, we expanded to Saudi Arabia in multiple cities.With Ghaseel, you can order a car wash at home, work, or any preferred location from one of our certified service providers available on the Ghaseel platform.',
+          'Get your car washed anytime and anywhere with Ghaseel. We are the first app for car wash certifications in Kuwait, we expanded to Saudi Arabia in multiple cities.With Ghaseel, you can order a car wash at home, work, or any preferred location from one of our certified service providers available on the Ghaseel platform.',
       image: 'assets/images/gaseel.png',
       playLink:
           'https://play.google.com/store/apps/details?id=com.ghaseel.ghaseel2',

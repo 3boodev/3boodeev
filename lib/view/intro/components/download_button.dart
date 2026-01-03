@@ -13,8 +13,8 @@ class DownloadButton extends StatelessWidget {
         launchUrl(Uri.parse('https://drive.google.com/file/d/1pYHFjUWNU0tZY0bBvKucAq5aZwy0H4kr/view?usp=sharing'));
       },
       child: Container(
-        alignment: Alignment.center,
-        padding: const EdgeInsets.symmetric(vertical: defaultPadding/1.5,horizontal: defaultPadding*2),
+        // alignment: Alignment.center,
+        padding: const EdgeInsets.symmetric(vertical: defaultPadding/1.5,horizontal: defaultPadding),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
             boxShadow:const [
@@ -30,6 +30,7 @@ class DownloadButton extends StatelessWidget {
               ]),
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               'Download CV',
